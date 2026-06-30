@@ -1,5 +1,7 @@
 // src/data/cars.js
 
+// On importe chaque image en haut du fichier, comme un composant.
+// Vite transforme cet import en une URL utilisable directement dans "src".
 import bmw from "../assets/images/bmw-serie3.jpg";
 import mercedes from "../assets/images/mercedes-classec.jpg";
 import audi from "../assets/images/audi-a4.jpg";
@@ -15,6 +17,8 @@ import civic from "../assets/images/honda-civic.jpg";
 import mazda from "../assets/images/mazda-cx5.jpg";
 import qashqai from "../assets/images/nissan-qashqai.jpg";
 import volvo from "../assets/images/volvo-xc60.jpg";
+
+// src/data/cars.js
 
 const cars = [
   {
@@ -87,7 +91,7 @@ const cars = [
     puissance: "130 ch",
     kilometrage: 18000,
     prix: 23000,
-    image: golf,
+    image: volvo,
     description:
       "La citadine compacte préférée des Européens, polyvalente et agréable à conduire.",
   },
@@ -130,7 +134,7 @@ const cars = [
     puissance: "230 ch",
     kilometrage: 8000,
     prix: 38000,
-    image: tucson,
+    image: history,
     description:
       "SUV moderne offrant espace, technologie et efficacité énergétique.",
   },
@@ -159,7 +163,7 @@ const cars = [
     puissance: "100 ch",
     kilometrage: 25000,
     prix: 14500,
-    image: clio,
+    image: mazda,
     description: "Citadine économique idéale pour les trajets urbains.",
   },
   {
@@ -188,7 +192,7 @@ const cars = [
     puissance: "126 ch",
     kilometrage: 38000,
     prix: 18000,
-    image: civic,
+    image: clio,
     description: "Compacte fiable au style sportif et à l'entretien abordable.",
   },
   {
@@ -202,7 +206,7 @@ const cars = [
     puissance: "165 ch",
     kilometrage: 17000,
     prix: 31000,
-    image: mazda,
+    image: qashqai,
     description: "SUV élégant au design soigné et à la conduite plaisante.",
   },
   {
@@ -216,7 +220,7 @@ const cars = [
     puissance: "150 ch",
     kilometrage: 30000,
     prix: 24500,
-    image: qashqai,
+    image: mazda,
     description:
       "SUV compact polyvalent, parfait équilibre entre ville et route.",
   },
@@ -231,7 +235,7 @@ const cars = [
     puissance: "250 ch",
     kilometrage: 6000,
     prix: 48000,
-    image: volvo,
+    image: mazda,
     description:
       "SUV premium scandinave alliant sécurité, confort et technologie.",
   },

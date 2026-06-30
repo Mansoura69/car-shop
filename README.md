@@ -2,6 +2,26 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
+## Lancer le site sur Windows
+
+Si PowerShell affiche une erreur du type "l'execution de scripts est desactivee", lance le fichier :
+
+```bat
+start-site.bat
+```
+
+Ou utilise cette commande depuis PowerShell :
+
+```powershell
+npm.cmd run dev
+```
+
+Puis ouvre l'adresse affichee par Vite, generalement :
+
+```text
+http://localhost:5173/
+```
+
 Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
