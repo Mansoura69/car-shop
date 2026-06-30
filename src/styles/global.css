@@ -236,6 +236,11 @@ img {
   .container {
     padding: 0 20px;
   }
+
+  .section-reveal {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ===== Page 404 ===== */

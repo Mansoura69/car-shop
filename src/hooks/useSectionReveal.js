@@ -7,6 +7,11 @@ export function useSectionReveal(threshold = 0.12) {
     const element = ref.current;
     if (!element) return;
 
+    if (!("IntersectionObserver" in window)) {
+      element.classList.add("visible");
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
