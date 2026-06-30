@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
 import "../styles/hero.css";
-
+import tucson from "../assets/images/hyundai-tucson.jpg";
 function Hero() {
   return (
     <section className="hero">
       <div className="hero-bg">
-        <img
-          src="/src/assets/images/hyundai-tucson.jpg"
-          alt=""
-          aria-hidden="true"
-        />
+        <img src={tucson} alt="" aria-hidden="true" />
         <div className="hero-overlay" />
       </div>
 
