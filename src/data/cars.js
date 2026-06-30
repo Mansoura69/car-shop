@@ -1,10 +1,5 @@
 // src/data/cars.js
 
-// Ce tableau simule une base de données de voitures.
-// Chaque objet représente une voiture avec toutes ses caractéristiques.
-// "id" est très important : il nous servira à retrouver une voiture précise
-// (par exemple sur la page Détails) grâce à l'URL.
-
 const cars = [
   {
     id: 1,
@@ -17,7 +12,7 @@ const cars = [
     puissance: "184 ch",
     kilometrage: 15000,
     prix: 32000,
-    image: "https://loremflickr.com/640/400/bmw,sedan",
+    image: "/src/assets/images/bmw-serie3.jpg",
     description:
       "Berline sportive et élégante, parfaite pour la ville comme pour la route.",
   },
@@ -32,7 +27,7 @@ const cars = [
     puissance: "194 ch",
     kilometrage: 28000,
     prix: 29500,
-    image: "https://loremflickr.com/640/400/mercedes",
+    image: "/src/assets/images/mercedes-classec.jpg",
     description:
       "Confort premium et finitions haut de gamme pour cette Classe C.",
   },
@@ -47,7 +42,7 @@ const cars = [
     puissance: "150 ch",
     kilometrage: 5000,
     prix: 35000,
-    image: "https://loremflickr.com/640/400/audi,sedan",
+    image: "/src/assets/images/audi-a4.jpg",
     description: "Technologie de pointe et design intemporel signé Audi.",
   },
   {
@@ -61,7 +56,7 @@ const cars = [
     puissance: "122 ch",
     kilometrage: 42000,
     prix: 19500,
-    image: "https://loremflickr.com/640/400/toyota,corolla",
+    image: "/src/assets/images/toyota-corolla.jpg",
     description:
       "Fiabilité légendaire et faible consommation pour un usage quotidien.",
   },
@@ -76,7 +71,7 @@ const cars = [
     puissance: "130 ch",
     kilometrage: 18000,
     prix: 23000,
-    image: "https://loremflickr.com/640/400/volkswagen,golf",
+    image: "/src/assets/images/vw-golf.jpg",
     description:
       "La citadine compacte préférée des Européens, polyvalente et agréable à conduire.",
   },
@@ -91,7 +86,7 @@ const cars = [
     puissance: "130 ch",
     kilometrage: 32000,
     prix: 20500,
-    image: "https://loremflickr.com/640/400/peugeot,car",
+    image: "/src/assets/images/peugeot-308.jpg",
     description: "Design français raffiné et habitacle technologique.",
   },
   {
@@ -105,7 +100,7 @@ const cars = [
     puissance: "125 ch",
     kilometrage: 55000,
     prix: 15500,
-    image: "https://loremflickr.com/640/400/ford,focus",
+    image: "/src/assets/images/ford-focus.jpg",
     description: "Compacte dynamique au comportement routier apprécié.",
   },
   {
@@ -119,7 +114,7 @@ const cars = [
     puissance: "230 ch",
     kilometrage: 8000,
     prix: 38000,
-    image: "https://loremflickr.com/640/400/hyundai,suv",
+    image: "/src/assets/images/hyundai-tucson.jpg",
     description:
       "SUV moderne offrant espace, technologie et efficacité énergétique.",
   },
@@ -134,7 +129,7 @@ const cars = [
     puissance: "136 ch",
     kilometrage: 21000,
     prix: 27500,
-    image: "https://loremflickr.com/640/400/kia,suv",
+    image: "/src/assets/images/kia-sportage.jpg",
     description: "SUV familial robuste avec un excellent rapport qualité-prix.",
   },
   {
@@ -148,7 +143,7 @@ const cars = [
     puissance: "100 ch",
     kilometrage: 25000,
     prix: 14500,
-    image: "https://loremflickr.com/640/400/renault,car",
+    image: "/src/assets/images/renault-clio.jpg",
     description: "Citadine économique idéale pour les trajets urbains.",
   },
   {
@@ -162,7 +157,7 @@ const cars = [
     puissance: "283 ch",
     kilometrage: 12000,
     prix: 42000,
-    image: "https://loremflickr.com/640/400/tesla,electriccar",
+    image: "/src/assets/images/tesla-model3.jpg",
     description:
       "Berline électrique haute performance avec autonomie longue distance.",
   },
@@ -177,7 +172,7 @@ const cars = [
     puissance: "126 ch",
     kilometrage: 38000,
     prix: 18000,
-    image: "https://loremflickr.com/640/400/honda,civic",
+    image: "/src/assets/images/honda-civic.jpg",
     description: "Compacte fiable au style sportif et à l'entretien abordable.",
   },
   {
@@ -191,7 +186,7 @@ const cars = [
     puissance: "165 ch",
     kilometrage: 17000,
     prix: 31000,
-    image: "https://loremflickr.com/640/400/mazda,suv",
+    image: "/src/assets/images/mazda-cx5.jpg",
     description: "SUV élégant au design soigné et à la conduite plaisante.",
   },
   {
@@ -205,7 +200,7 @@ const cars = [
     puissance: "150 ch",
     kilometrage: 30000,
     prix: 24500,
-    image: "https://loremflickr.com/640/400/nissan,suv",
+    image: "/src/assets/images/nissan-qashqai.jpg",
     description:
       "SUV compact polyvalent, parfait équilibre entre ville et route.",
   },
@@ -220,7 +215,7 @@ const cars = [
     puissance: "250 ch",
     kilometrage: 6000,
     prix: 48000,
-    image: "https://loremflickr.com/640/400/volvo,suv",
+    image: "/src/assets/images/volvo-xc60.jpg",
     description:
       "SUV premium scandinave alliant sécurité, confort et technologie.",
   },

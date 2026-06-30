@@ -6,7 +6,7 @@ function Hero() {
     <section className="hero">
       <div className="hero-bg">
         <img
-          src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1920&q=80"
+          src="/src/assets/images/hyundai-tucson.jpg"
           alt=""
           aria-hidden="true"
         />
