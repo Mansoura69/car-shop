@@ -1,5 +1,25 @@
 // src/data/cars.js
 
+// On importe chaque image en haut du fichier, comme un composant.
+// Vite transforme cet import en une URL utilisable directement dans "src".
+import bmw from "../assets/images/bmw-serie3.jpg";
+import mercedes from "../assets/images/mercedes-classec.jpg";
+import audi from "../assets/images/audi-a4.jpg";
+import toyota from "../assets/images/toyota-corolla.jpg";
+import golf from "../assets/images/vw-golf.jpg";
+import peugeot from "../assets/images/peugeot-308.jpg";
+import focus from "../assets/images/ford-focus.jpg";
+import tucson from "../assets/images/hyundai-tucson.jpg";
+import sportage from "../assets/images/kia-sportage.jpg";
+import clio from "../assets/images/renault-clio.jpg";
+import tesla from "../assets/images/tesla-model3.jpg";
+import civic from "../assets/images/honda-civic.jpg";
+import mazda from "../assets/images/mazda-cx5.jpg";
+import qashqai from "../assets/images/nissan-qashqai.jpg";
+import volvo from "../assets/images/volvo-xc60.jpg";
+
+// src/data/cars.js
+
 const cars = [
   {
     id: 1,
@@ -12,7 +32,7 @@ const cars = [
     puissance: "184 ch",
     kilometrage: 15000,
     prix: 32000,
-    image: "/src/assets/images/bmw-serie3.jpg",
+    image: bmw,
     description:
       "Berline sportive et élégante, parfaite pour la ville comme pour la route.",
   },
@@ -27,7 +47,7 @@ const cars = [
     puissance: "194 ch",
     kilometrage: 28000,
     prix: 29500,
-    image: "/src/assets/images/mercedes-classec.jpg",
+    image: mercedes,
     description:
       "Confort premium et finitions haut de gamme pour cette Classe C.",
   },
@@ -42,7 +62,7 @@ const cars = [
     puissance: "150 ch",
     kilometrage: 5000,
     prix: 35000,
-    image: "/src/assets/images/audi-a4.jpg",
+    image: audi,
     description: "Technologie de pointe et design intemporel signé Audi.",
   },
   {
@@ -56,7 +76,7 @@ const cars = [
     puissance: "122 ch",
     kilometrage: 42000,
     prix: 19500,
-    image: "/src/assets/images/toyota-corolla.jpg",
+    image: toyota,
     description:
       "Fiabilité légendaire et faible consommation pour un usage quotidien.",
   },
@@ -71,7 +91,7 @@ const cars = [
     puissance: "130 ch",
     kilometrage: 18000,
     prix: 23000,
-    image: "/src/assets/images/vw-golf.jpg",
+    image: volvo,
     description:
       "La citadine compacte préférée des Européens, polyvalente et agréable à conduire.",
   },
@@ -86,7 +106,7 @@ const cars = [
     puissance: "130 ch",
     kilometrage: 32000,
     prix: 20500,
-    image: "/src/assets/images/peugeot-308.jpg",
+    image: peugeot,
     description: "Design français raffiné et habitacle technologique.",
   },
   {
@@ -100,7 +120,7 @@ const cars = [
     puissance: "125 ch",
     kilometrage: 55000,
     prix: 15500,
-    image: "/src/assets/images/ford-focus.jpg",
+    image: focus,
     description: "Compacte dynamique au comportement routier apprécié.",
   },
   {
@@ -114,7 +134,7 @@ const cars = [
     puissance: "230 ch",
     kilometrage: 8000,
     prix: 38000,
-    image: "/src/assets/images/hyundai-tucson.jpg",
+    image: history,
     description:
       "SUV moderne offrant espace, technologie et efficacité énergétique.",
   },
@@ -129,7 +149,7 @@ const cars = [
     puissance: "136 ch",
     kilometrage: 21000,
     prix: 27500,
-    image: "/src/assets/images/kia-sportage.jpg",
+    image: sportage,
     description: "SUV familial robuste avec un excellent rapport qualité-prix.",
   },
   {
@@ -143,7 +163,7 @@ const cars = [
     puissance: "100 ch",
     kilometrage: 25000,
     prix: 14500,
-    image: "/src/assets/images/renault-clio.jpg",
+    image: mazda,
     description: "Citadine économique idéale pour les trajets urbains.",
   },
   {
@@ -157,7 +177,7 @@ const cars = [
     puissance: "283 ch",
     kilometrage: 12000,
     prix: 42000,
-    image: "/src/assets/images/tesla-model3.jpg",
+    image: tesla,
     description:
       "Berline électrique haute performance avec autonomie longue distance.",
   },
@@ -172,7 +192,7 @@ const cars = [
     puissance: "126 ch",
     kilometrage: 38000,
     prix: 18000,
-    image: "/src/assets/images/honda-civic.jpg",
+    image: clio,
     description: "Compacte fiable au style sportif et à l'entretien abordable.",
   },
   {
@@ -186,7 +206,7 @@ const cars = [
     puissance: "165 ch",
     kilometrage: 17000,
     prix: 31000,
-    image: "/src/assets/images/mazda-cx5.jpg",
+    image: qashqai,
     description: "SUV élégant au design soigné et à la conduite plaisante.",
   },
   {
@@ -200,7 +220,7 @@ const cars = [
     puissance: "150 ch",
     kilometrage: 30000,
     prix: 24500,
-    image: "/src/assets/images/nissan-qashqai.jpg",
+    image: mazda,
     description:
       "SUV compact polyvalent, parfait équilibre entre ville et route.",
   },
@@ -215,7 +235,7 @@ const cars = [
     puissance: "250 ch",
     kilometrage: 6000,
     prix: 48000,
-    image: "/src/assets/images/volvo-xc60.jpg",
+    image: peugeot,
     description:
       "SUV premium scandinave alliant sécurité, confort et technologie.",
   },
