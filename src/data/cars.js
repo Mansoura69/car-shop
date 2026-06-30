@@ -134,7 +134,7 @@ const cars = [
     puissance: "230 ch",
     kilometrage: 8000,
     prix: 38000,
-    image: history,
+    image: tucson,
     description:
       "SUV moderne offrant espace, technologie et efficacité énergétique.",
   },
