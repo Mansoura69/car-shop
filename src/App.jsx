@@ -1,5 +1,5 @@
 // src/App.jsx
-
+import WhatsAppButton from "./components/WhatsAppButton";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -68,6 +68,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+      <WhatsAppButton />
 
       <Footer />
     </div>

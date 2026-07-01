@@ -82,7 +82,8 @@
   width: 100%;
 }
 
-.navbar-actions {
+/* Remplace .navbar-actions par .navbar-right */
+.navbar-right {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -173,4 +174,44 @@
   .navbar-toggle {
     display: block;
   }
+}
+
+/* Lien actif dans la navbar */
+.navbar-links .nav-link {
+  color: #f1f1f1;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* La barre rouge sous le lien */
+.navbar-links .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f97316;
+  transition: width 0.3s ease;
+}
+
+/* Au survol */
+.navbar-links .nav-link:hover {
+  color: #f97316;
+}
+
+.navbar-links .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Lien de la page actuelle : barre rouge permanente + couleur rouge */
+.navbar-links .nav-link.active {
+  color: #f97316;
+}
+
+.navbar-links .nav-link.active::after {
+  width: 100%;
 }
