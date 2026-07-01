@@ -61,6 +61,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -377,4 +381,34 @@ body.dark-mode .not-found-code {
   .whatsapp-tooltip {
     display: none; /* masqué sur mobile, pas assez de place */
   }
+}
+
+/* Le contenu principal doit être au-dessus des particules */
+.App {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 72px);
+  padding-top: 72px;
+}
+
+.page-content .hero {
+  margin-top: -72px;
+}
+
+/* Toutes les pages ont un fond légèrement transparent
+   pour laisser deviner les particules derrière */
+.hero,
+.car-list-section,
+.contact-section,
+.about-section,
+.details-section,
+footer {
+  position: relative;
+  z-index: 1;
 }

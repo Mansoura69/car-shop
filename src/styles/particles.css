@@ -1,0 +1,41 @@
+/* src/styles/particles.css */
+
+/* Conteneur pleine page, derrière tout le contenu */
+.particles-container {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* clics passent à travers, les particules ne bloquent rien */
+  overflow: hidden;
+  z-index: 0; /* derrière le contenu mais visible */
+}
+
+/* Chaque particule */
+.particle {
+  position: absolute;
+  bottom: -60px; /* commence sous l'écran */
+  display: block;
+  user-select: none;
+  animation: floatUp linear infinite;
+  will-change: transform, opacity; /* optimisation performance GPU */
+  text-shadow: 0 8px 18px rgba(31, 41, 55, 0.18);
+}
+
+/* Animation : monte de bas en haut avec une légère dérive horizontale */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: var(--particle-opacity, 0.3); /* apparition progressive */
+  }
+  90% {
+    opacity: var(--particle-opacity, 0.3);
+  }
+  100% {
+    transform: translateY(-110vh) translateX(var(--drift)) rotate(360deg);
+    opacity: 0; /* disparition progressive */
+  }
+}

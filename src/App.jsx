@@ -1,5 +1,6 @@
 // src/App.jsx
 import WhatsAppButton from "./components/WhatsAppButton";
+import FloatingParticles from "./components/FloatingParticles";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -36,38 +37,42 @@ function App() {
     <div className="App">
       <Navbar />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Home favorites={favorites} onToggleFavorite={toggleFavorite} />
-          }
-        />
-        <Route
-          path="/voitures"
-          element={
-            <Home favorites={favorites} onToggleFavorite={toggleFavorite} />
-          }
-        />
-        <Route
-          path="/voitures/:id"
-          element={
-            <Details favorites={favorites} onToggleFavorite={toggleFavorite} />
-          }
-        />
-        <Route
-          path="/favoris"
-          element={
-            <Favorites
-              favorites={favorites}
-              onToggleFavorite={toggleFavorite}
-            />
-          }
-        />
-        <Route path="/a-propos" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <FloatingParticles count={20} />
+
+      <main className="page-content">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Home favorites={favorites} onToggleFavorite={toggleFavorite} />
+            }
+          />
+          <Route
+            path="/voitures"
+            element={
+              <Home favorites={favorites} onToggleFavorite={toggleFavorite} />
+            }
+          />
+          <Route
+            path="/voitures/:id"
+            element={
+              <Details favorites={favorites} onToggleFavorite={toggleFavorite} />
+            }
+          />
+          <Route
+            path="/favoris"
+            element={
+              <Favorites
+                favorites={favorites}
+                onToggleFavorite={toggleFavorite}
+              />
+            }
+          />
+          <Route path="/a-propos" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
 
       <WhatsAppButton />
 

@@ -2,7 +2,7 @@
 
 .car-list-section {
   padding: 80px 0;
-  background-color: var(--bg-color);
+  background-color: transparent;
 }
 
 .car-list-grid {

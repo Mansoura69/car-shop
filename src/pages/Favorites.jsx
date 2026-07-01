@@ -11,10 +11,7 @@ function Favorites({ favorites, onToggleFavorite }) {
   const favoriteCars = cars.filter((car) => favorites.includes(car.id));
 
   return (
-    <section
-      className="car-list-section container"
-      style={{ paddingTop: "140px" }}
-    >
+    <section className="car-list-section container">
       <h1 className="section-title">Mes favoris</h1>
 
       {favoriteCars.length === 0 ? (
