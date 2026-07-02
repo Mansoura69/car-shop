@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import Details from "./pages/Details";
 import About from "./pages/About";
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
 
       <FloatingParticles count={20} />

@@ -2,21 +2,20 @@
 
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import DarkModeToggle from "./DarkModeToggle";
+import LanguageSwitcher from "./LanguageSwitcher";
 import "../styles/navbar.css";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
 
-  // NavLink reçoit une fonction pour className (pas juste une string).
-  // React Router appelle cette fonction en lui passant { isActive }
-  // qui est true si l'URL actuelle correspond au lien.
-  // On s'en sert pour ajouter la classe "active" dynamiquement.
   const getNavClass = ({ isActive }) =>
     isActive ? "nav-link active" : "nav-link";
 
@@ -29,34 +28,44 @@ function Navbar() {
       <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
         <li>
           <NavLink to="/" className={getNavClass} onClick={closeMenu} end>
-            Accueil
+            {t("navbar.home")}
           </NavLink>
         </li>
+
         <li>
           <NavLink to="/voitures" className={getNavClass} onClick={closeMenu}>
-            Voitures
+            {t("navbar.cars")}
           </NavLink>
         </li>
+
         <li>
           <NavLink to="/favoris" className={getNavClass} onClick={closeMenu}>
-            Favoris
+            {t("navbar.favorites")}
           </NavLink>
         </li>
+
         <li>
           <NavLink to="/a-propos" className={getNavClass} onClick={closeMenu}>
-            À propos
+            {t("navbar.about")}
           </NavLink>
         </li>
+
         <li>
           <NavLink to="/contact" className={getNavClass} onClick={closeMenu}>
-            Contact
+            {t("navbar.contact")}
           </NavLink>
         </li>
       </ul>
 
       <div className="navbar-right">
+        <LanguageSwitcher />
         <DarkModeToggle />
-        <button className="navbar-toggle" onClick={toggleMenu}>
+
+        <button
+          className="navbar-toggle"
+          onClick={toggleMenu}
+          aria-label={isOpen ? t("navbar.closeMenu") : t("navbar.openMenu")}
+        >
           <FontAwesomeIcon icon={isOpen ? faXmark : faBars} />
         </button>
       </div>

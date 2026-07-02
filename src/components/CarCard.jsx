@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import FavoriteButton from "./FavoriteButton";
 import "../styles/cards.css";
 
 function CarCard({ car, isFavorite, onToggleFavorite }) {
+  const { t } = useTranslation();
+
   return (
     <div className="car-card">
       <div className="car-card-image">
@@ -11,10 +14,12 @@ function CarCard({ car, isFavorite, onToggleFavorite }) {
           alt={`${car.marque} ${car.modele}`}
           onError={(e) => {
             e.target.onerror = null;
-            e.target.src =
-              "https://placehold.co/640x400/1f2937/f97316?text=Image+indisponible";
+            e.target.src = `https://placehold.co/640x400/1f2937/f97316?text=${encodeURIComponent(
+              t("catalog.imageUnavailable"),
+            )}`;
           }}
         />
+
         <FavoriteButton
           isFavorite={isFavorite}
           onToggle={() => onToggleFavorite(car.id)}
@@ -25,6 +30,7 @@ function CarCard({ car, isFavorite, onToggleFavorite }) {
         <h3 className="car-card-title">
           {car.marque} {car.modele}
         </h3>
+
         <p className="car-card-year">{car.annee}</p>
 
         <p className="car-card-price">{car.prix.toLocaleString()} €</p>
@@ -34,10 +40,11 @@ function CarCard({ car, isFavorite, onToggleFavorite }) {
             to={`/voitures/${car.id}`}
             className="btn btn-primary car-card-btn"
           >
-            Voir les détails
+            {t("catalog.details")}
           </Link>
+
           <Link to="/contact" className="btn btn-secondary car-card-btn">
-            Demander un essai
+            {t("catalog.testDrive")}
           </Link>
         </div>
       </div>

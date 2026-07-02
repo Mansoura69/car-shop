@@ -1,0 +1,180 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "cars": "Coches",
+    "favorites": "Favoritos",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "titleStart": "Encuentra el coche",
+    "titleHighlight": "perfecto",
+    "titleEnd": "para ti",
+    "subtitle": "Descubre nuestra selección de vehículos premium, revisados y listos para salir a la carretera. Calidad, confianza y rendimiento reunidos.",
+    "primaryButton": "Ver nuestros coches",
+    "secondaryButton": "Contáctanos",
+    "scroll": "Desplazar"
+  },
+  "language": {
+    "fr": "Francés",
+    "en": "Inglés",
+    "es": "Español",
+    "change": "Cambiar idioma"
+  },
+  "catalog": {
+    "title": "Coches disponibles",
+    "result_one": "{{count}} vehículo encontrado",
+    "result_other": "{{count}} vehículos encontrados",
+    "noResults": "Ningún coche coincide con tu búsqueda.",
+    "details": "Ver detalles",
+    "testDrive": "Solicitar una prueba",
+    "imageUnavailable": "Imagen no disponible",
+    "searchPlaceholder": "Buscar por marca o modelo..."
+  },
+  "filters": {
+    "allBrands": "Todas las marcas",
+    "allYears": "Todos los años",
+    "allFuels": "Todos los combustibles",
+    "allTransmissions": "Todas las transmisiones",
+    "allPrices": "Todos los precios",
+    "lessThan": "Menos de {{price}} €",
+    "sortBy": "Ordenar por...",
+    "priceAsc": "Precio ascendente",
+    "priceDesc": "Precio descendente",
+    "yearDesc": "Más recientes",
+    "yearAsc": "Más antiguos",
+    "alpha": "Orden alfabético"
+  },
+  "footer": {
+    "description": "Tu destino de confianza para vehículos usados premium cuidadosamente revisados y garantizados.",
+    "sitemap": "Mapa del sitio",
+    "vehicles": "Nuestros coches",
+    "newsletter": "Boletín",
+    "newsletterText": "Suscríbete para recibir nuestras últimas novedades y ofertas exclusivas.",
+    "emailPlaceholder": "Tu dirección de email",
+    "subscribe": "Suscribirse",
+    "subscribed": "✓ ¡Gracias por suscribirte!",
+    "rights": "Todos los derechos reservados.",
+    "legal": "Aviso legal",
+    "privacy": "Política de privacidad",
+    "terms": "Condiciones"
+  },
+  "favoritesPage": {
+    "title": "Mis favoritos",
+    "empty": "Aún no has añadido ningún coche a tus favoritos.",
+    "discover": "Ver nuestros coches"
+  },
+  "favorites": {
+    "add": "Añadir a favoritos",
+    "remove": "Quitar de favoritos"
+  },
+  "theme": {
+    "toggle": "Cambiar modo oscuro"
+  },
+  "whatsapp": {
+    "message": "Hola, estoy interesado en un vehículo de CarShop.",
+    "aria": "Contáctanos por WhatsApp",
+    "tooltip": "Contáctanos"
+  },
+  "details": {
+    "notFound": "Coche no encontrado",
+    "backToList": "Volver a la lista",
+    "back": "Volver",
+    "year": "Año",
+    "color": "Color",
+    "fuel": "Combustible",
+    "transmission": "Transmisión",
+    "power": "Potencia",
+    "mileage": "Kilometraje"
+  },
+  "about": {
+    "title": "Acerca de CarShop",
+    "subtitle": "Tu socio de confianza para comprar vehículos usados premium.",
+    "sold": "Vehículos vendidos al mes",
+    "satisfied": "Clientes satisfechos",
+    "checks": "Puntos de control certificados",
+    "historyTitle": "Nuestra historia",
+    "historyText": "Fundado con pasión por el automóvil, CarShop nació para simplificar la compra de coches usados ofreciendo solo vehículos cuidadosamente seleccionados, inspeccionados y verificados.",
+    "missionTitle": "Nuestra misión",
+    "missionText": "Ofrecer a cada cliente una experiencia de compra transparente, fiable y sin estrés. Ponemos la calidad y la confianza en el centro de cada transacción.",
+    "valuesTitle": "Nuestros valores fundamentales",
+    "transparencyTitle": "Transparencia",
+    "transparencyText": "Historial completo e informes de diagnóstico detallados para cada coche.",
+    "qualityTitle": "Calidad",
+    "qualityText": "Cada vehículo pasa una rigurosa inspección de 110 puntos.",
+    "serviceTitle": "Atención al cliente",
+    "serviceText": "Acompañamiento personalizado desde la búsqueda inicial hasta la entrega final.",
+    "trustTitle": "Confianza",
+    "trustText": "Garantías completas y precios justos, sin cargos ocultos ni sorpresas.",
+    "ctaTitle": "Encuentra tu próximo vehículo hoy",
+    "ctaText": "Explora nuestro catálogo online de vehículos usados recientes y encuentra el modelo que se adapta perfectamente a tus necesidades y presupuesto.",
+    "catalogButton": "Ver catálogo",
+    "contactButton": "Contáctanos"
+  },
+  "contactPage": {
+    "title": "Contáctanos",
+    "subtitle": "¿Tienes una pregunta o un proyecto de compra? Nuestro equipo está disponible para responderte lo antes posible.",
+    "phone": "Teléfono",
+    "phoneHours": "Lunes a viernes, 9:00 - 19:00",
+    "email": "Email",
+    "address": "Dirección",
+    "openingHours": "Horario de apertura",
+    "week": "Lun - Vie: 9:00 - 19:00",
+    "saturday": "Sábado: 10:00 - 18:00",
+    "successTitle": "¡Mensaje enviado!",
+    "successText": "Gracias por contactarnos. Te responderemos en menos de 24 horas.",
+    "sendAnother": "Enviar otro mensaje",
+    "formTitle": "Envíanos un mensaje",
+    "nameLabel": "Nombre completo",
+    "namePlaceholder": "Tu nombre",
+    "emailLabel": "Dirección de email",
+    "emailPlaceholder": "ejemplo@email.com",
+    "subjectLabel": "Asunto",
+    "subjectPlaceholder": "Asunto de tu mensaje",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "¿Cómo podemos ayudarte?",
+    "submit": "Enviar mensaje"
+  },
+  "notFound": {
+    "text": "Ups, esta página no existe.",
+    "backHome": "Volver al inicio"
+  },
+  "cars": {
+    "colors": {
+      "black": "Negro",
+      "white": "Blanco",
+      "gray": "Gris",
+      "red": "Rojo",
+      "blue": "Azul"
+    },
+    "fuels": {
+      "petrol": "Gasolina",
+      "diesel": "Diésel",
+      "hybrid": "Híbrido",
+      "electric": "Eléctrico"
+    },
+    "transmissions": {
+      "automatic": "Automática",
+      "manual": "Manual"
+    },
+    "descriptions": {
+      "bmw3": "Una berlina deportiva y elegante, perfecta para la ciudad y la carretera.",
+      "mercedesC": "Confort premium y acabados de alta gama para esta Clase C.",
+      "audiA4": "Tecnología avanzada y diseño atemporal firmado por Audi.",
+      "toyotaCorolla": "Fiabilidad legendaria y bajo consumo para el uso diario.",
+      "vwGolf": "El compacto urbano favorito de Europa, versátil y agradable de conducir.",
+      "peugeot308": "Diseño francés refinado e interior tecnológico.",
+      "fordFocus": "Un compacto dinámico con un comportamiento en carretera muy apreciado.",
+      "hyundaiTucson": "Un SUV moderno que ofrece espacio, tecnología y eficiencia energética.",
+      "kiaSportage": "Un SUV familiar robusto con una excelente relación calidad-precio.",
+      "renaultClio": "Un coche urbano económico ideal para trayectos por la ciudad.",
+      "teslaModel3": "Una berlina eléctrica de alto rendimiento con autonomía de larga distancia.",
+      "hondaCivic": "Un compacto fiable con estilo deportivo y mantenimiento asequible.",
+      "mazdaCx5": "Un SUV elegante con diseño cuidado y conducción agradable.",
+      "nissanQashqai": "Un SUV compacto versátil, perfectamente equilibrado entre ciudad y carretera.",
+      "volvoXc60": "Un SUV premium escandinavo que combina seguridad, confort y tecnología."
+    }
+  }
+}

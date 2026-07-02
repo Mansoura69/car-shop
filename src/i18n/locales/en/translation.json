@@ -1,0 +1,180 @@
+{
+  "navbar": {
+    "home": "Home",
+    "cars": "Cars",
+    "favorites": "Favorites",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "titleStart": "Find the",
+    "titleHighlight": "perfect",
+    "titleEnd": "car for you",
+    "subtitle": "Discover our selection of premium vehicles, inspected and ready to hit the road. Quality, trust and performance combined.",
+    "primaryButton": "Browse our cars",
+    "secondaryButton": "Contact us",
+    "scroll": "Scroll"
+  },
+  "language": {
+    "fr": "French",
+    "en": "English",
+    "es": "Spanish",
+    "change": "Change language"
+  },
+  "catalog": {
+    "title": "Available cars",
+    "result_one": "{{count}} vehicle found",
+    "result_other": "{{count}} vehicles found",
+    "noResults": "No car matches your search.",
+    "details": "View details",
+    "testDrive": "Request a test drive",
+    "imageUnavailable": "Image unavailable",
+    "searchPlaceholder": "Search by brand or model..."
+  },
+  "filters": {
+    "allBrands": "All brands",
+    "allYears": "All years",
+    "allFuels": "All fuel types",
+    "allTransmissions": "All transmissions",
+    "allPrices": "All prices",
+    "lessThan": "Under €{{price}}",
+    "sortBy": "Sort by...",
+    "priceAsc": "Price low to high",
+    "priceDesc": "Price high to low",
+    "yearDesc": "Newest first",
+    "yearAsc": "Oldest first",
+    "alpha": "Alphabetical order"
+  },
+  "footer": {
+    "description": "Your trusted destination for carefully inspected and guaranteed premium used vehicles.",
+    "sitemap": "Site map",
+    "vehicles": "Our vehicles",
+    "newsletter": "Newsletter",
+    "newsletterText": "Subscribe to receive our latest arrivals and exclusive offers.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "subscribed": "✓ Thank you for subscribing!",
+    "rights": "All rights reserved.",
+    "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "terms": "Terms"
+  },
+  "favoritesPage": {
+    "title": "My favorites",
+    "empty": "You haven't added any car to your favorites yet.",
+    "discover": "Browse our cars"
+  },
+  "favorites": {
+    "add": "Add to favorites",
+    "remove": "Remove from favorites"
+  },
+  "theme": {
+    "toggle": "Toggle dark mode"
+  },
+  "whatsapp": {
+    "message": "Hello, I am interested in a vehicle on CarShop!",
+    "aria": "Contact us on WhatsApp",
+    "tooltip": "Contact us"
+  },
+  "details": {
+    "notFound": "Car not found",
+    "backToList": "Back to list",
+    "back": "Back",
+    "year": "Year",
+    "color": "Color",
+    "fuel": "Fuel",
+    "transmission": "Transmission",
+    "power": "Power",
+    "mileage": "Mileage"
+  },
+  "about": {
+    "title": "About CarShop",
+    "subtitle": "Your trusted partner for premium used vehicles.",
+    "sold": "Vehicles sold per month",
+    "satisfied": "Satisfied customers",
+    "checks": "Certified checkpoints",
+    "historyTitle": "Our story",
+    "historyText": "Founded with a passion for cars, CarShop was created to make buying used cars simpler by offering only carefully selected, inspected and verified vehicles.",
+    "missionTitle": "Our mission",
+    "missionText": "To give every customer a transparent, reliable and stress-free buying experience. We put quality and trust at the heart of every transaction.",
+    "valuesTitle": "Our core values",
+    "transparencyTitle": "Transparency",
+    "transparencyText": "Complete history and detailed diagnostic reports provided for every car.",
+    "qualityTitle": "Quality",
+    "qualityText": "Every vehicle goes through a rigorous 110-point inspection.",
+    "serviceTitle": "Customer service",
+    "serviceText": "Personal support from the first search to final delivery.",
+    "trustTitle": "Trust",
+    "trustText": "Complete guarantees and fair prices, with no hidden fees or surprises.",
+    "ctaTitle": "Find your next vehicle today",
+    "ctaText": "Browse our online catalog of recent used vehicles and find the model that perfectly matches your needs and budget.",
+    "catalogButton": "View our catalog",
+    "contactButton": "Contact us"
+  },
+  "contactPage": {
+    "title": "Contact us",
+    "subtitle": "Have a question or a buying project? Our team is here to answer you as quickly as possible.",
+    "phone": "Phone",
+    "phoneHours": "Monday to Friday, 9 AM - 7 PM",
+    "email": "Email",
+    "address": "Address",
+    "openingHours": "Opening hours",
+    "week": "Mon - Fri: 9:00 AM - 7:00 PM",
+    "saturday": "Saturday: 10:00 AM - 6:00 PM",
+    "successTitle": "Message sent!",
+    "successText": "Thank you for contacting us. We will get back to you within 24 hours.",
+    "sendAnother": "Send another message",
+    "formTitle": "Send us a message",
+    "nameLabel": "Full name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "example@email.com",
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "Subject of your message",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help you?",
+    "submit": "Send message"
+  },
+  "notFound": {
+    "text": "Oops, this page does not exist.",
+    "backHome": "Back to home"
+  },
+  "cars": {
+    "colors": {
+      "black": "Black",
+      "white": "White",
+      "gray": "Gray",
+      "red": "Red",
+      "blue": "Blue"
+    },
+    "fuels": {
+      "petrol": "Petrol",
+      "diesel": "Diesel",
+      "hybrid": "Hybrid",
+      "electric": "Electric"
+    },
+    "transmissions": {
+      "automatic": "Automatic",
+      "manual": "Manual"
+    },
+    "descriptions": {
+      "bmw3": "A sporty and elegant sedan, perfect for both city driving and the open road.",
+      "mercedesC": "Premium comfort and high-end finishes for this C-Class.",
+      "audiA4": "Advanced technology and timeless design by Audi.",
+      "toyotaCorolla": "Legendary reliability and low fuel consumption for everyday use.",
+      "vwGolf": "Europe's favorite compact city car, versatile and pleasant to drive.",
+      "peugeot308": "Refined French design and a technology-focused interior.",
+      "fordFocus": "A dynamic compact car with appreciated road handling.",
+      "hyundaiTucson": "A modern SUV offering space, technology and energy efficiency.",
+      "kiaSportage": "A robust family SUV with excellent value for money.",
+      "renaultClio": "An economical city car ideal for urban journeys.",
+      "teslaModel3": "A high-performance electric sedan with long-distance range.",
+      "hondaCivic": "A reliable compact car with sporty styling and affordable maintenance.",
+      "mazdaCx5": "An elegant SUV with refined design and enjoyable driving.",
+      "nissanQashqai": "A versatile compact SUV, perfectly balanced between city and road.",
+      "volvoXc60": "A premium Scandinavian SUV combining safety, comfort and technology."
+    }
+  }
+}

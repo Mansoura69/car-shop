@@ -1,38 +1,67 @@
-// src/components/DarkModeToggle.jsx
-
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+
+const getSystemTheme = () =>
+  window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+
+const getInitialTheme = () => {
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "dark" || savedTheme === "light") {
+    return savedTheme;
+  }
+
+  return getSystemTheme();
+};
+
+const applyTheme = (theme) => {
+  document.body.classList.toggle("dark-mode", theme === "dark");
+};
 
 function DarkModeToggle() {
-  // On initialise l'état en lisant directement le localStorage.
-  // Cette fonction ne s'exécute qu'une seule fois, au premier rendu
-  // (c'est le principe de l'initialisation "paresseuse" de useState).
-  const [darkMode, setDarkMode] = useState(() => {
-    const saved = localStorage.getItem("theme");
-    return saved === "dark";
-  });
+  const { t } = useTranslation();
 
-  // useEffect se déclenche à chaque fois que "darkMode" change.
-  // Son rôle ici : synchroniser l'état React avec le DOM réel (le body)
-  // et avec le localStorage, pour que le choix soit conservé après un rechargement.
+  const [theme, setTheme] = useState(getInitialTheme);
+
   useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-      localStorage.setItem("theme", "dark");
-    } else {
-      document.body.classList.remove("dark-mode");
-      localStorage.setItem("theme", "light");
-    }
-  }, [darkMode]);
+    applyTheme(theme);
+  }, [theme]);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    const handleSystemThemeChange = (event) => {
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme !== "dark" && savedTheme !== "light") {
+        setTheme(event.matches ? "dark" : "light");
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleSystemThemeChange);
+
+    return () => {
+      mediaQuery.removeEventListener("change", handleSystemThemeChange);
+    };
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme((currentTheme) => {
+      const nextTheme = currentTheme === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", nextTheme);
+      return nextTheme;
+    });
+  };
 
   return (
     <button
       className="dark-mode-toggle"
-      onClick={() => setDarkMode(!darkMode)}
-      aria-label="Basculer le mode sombre"
+      onClick={toggleTheme}
+      aria-label={t("theme.toggle")}
     >
-      <FontAwesomeIcon icon={darkMode ? faSun : faMoon} />
+      <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
     </button>
   );
 }

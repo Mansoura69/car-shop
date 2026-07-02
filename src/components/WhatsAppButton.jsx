@@ -1,19 +1,19 @@
-// src/components/WhatsAppButton.jsx
-
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 const WHATSAPP_NUMBER = "22960000000";
-const WHATSAPP_MESSAGE =
-  "Bonjour, je suis intéressé par un véhicule sur CarShop !";
 
 function WhatsAppButton() {
+  const { t } = useTranslation();
+
   const handleClick = () => {
     const url =
       "https://wa.me/" +
       WHATSAPP_NUMBER +
       "?text=" +
-      encodeURIComponent(WHATSAPP_MESSAGE);
+      encodeURIComponent(t("whatsapp.message"));
+
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
@@ -21,10 +21,10 @@ function WhatsAppButton() {
     <button
       onClick={handleClick}
       className="whatsapp-btn"
-      aria-label="Nous contacter sur WhatsApp"
+      aria-label={t("whatsapp.aria")}
     >
       <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
-      <span className="whatsapp-tooltip">Contactez-nous</span>
+      <span className="whatsapp-tooltip">{t("whatsapp.tooltip")}</span>
     </button>
   );
 }

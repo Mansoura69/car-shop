@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -18,13 +19,15 @@ import {
 import "../styles/footer.css";
 
 function Footer() {
+  const { t } = useTranslation();
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
 
   const handleSubscribe = (e) => {
     e.preventDefault();
+
     if (email.trim()) {
-      console.log("Newsletter abonné :", email);
+      console.log("Newsletter:", email);
       setSubscribed(true);
       setEmail("");
     }
@@ -34,14 +37,13 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
-          {/* Colonne 1 : Description & Socials */}
           <div className="footer-col">
             <Link to="/" className="footer-logo">
               Car<span>Shop</span>
             </Link>
-            <p className="footer-desc">
-              Votre destination de confiance pour l'achat de véhicules d'occasion premium rigoureusement vérifiés et garantis.
-            </p>
+
+            <p className="footer-desc">{t("footer.description")}</p>
+
             <div className="footer-socials">
               <a
                 href="https://facebook.com"
@@ -52,6 +54,7 @@ function Footer() {
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
+
               <a
                 href="https://instagram.com"
                 target="_blank"
@@ -61,6 +64,7 @@ function Footer() {
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
+
               <a
                 href="https://twitter.com"
                 target="_blank"
@@ -70,6 +74,7 @@ function Footer() {
               >
                 <FontAwesomeIcon icon={faXTwitter} />
               </a>
+
               <a
                 href="https://linkedin.com"
                 target="_blank"
@@ -82,30 +87,32 @@ function Footer() {
             </div>
           </div>
 
-          {/* Colonne 2 : Liens de navigation */}
           <div className="footer-col">
-            <h3>Plan du site</h3>
+            <h3>{t("footer.sitemap")}</h3>
+
             <div className="footer-links-list">
-              <Link to="/">Accueil</Link>
-              <Link to="/voitures">Nos Véhicules</Link>
-              <Link to="/favoris">Favoris</Link>
-              <Link to="/a-propos">À propos</Link>
-              <Link to="/contact">Contact</Link>
+              <Link to="/">{t("navbar.home")}</Link>
+              <Link to="/voitures">{t("footer.vehicles")}</Link>
+              <Link to="/favoris">{t("navbar.favorites")}</Link>
+              <Link to="/a-propos">{t("navbar.about")}</Link>
+              <Link to="/contact">{t("navbar.contact")}</Link>
             </div>
           </div>
 
-          {/* Colonne 3 : Contact */}
           <div className="footer-col">
-            <h3>Contact</h3>
+            <h3>{t("navbar.contact")}</h3>
+
             <div className="footer-contact-info">
               <div className="footer-contact-item">
                 <FontAwesomeIcon icon={faPhone} />
                 <span>+33 1 23 45 67 89</span>
               </div>
+
               <div className="footer-contact-item">
                 <FontAwesomeIcon icon={faEnvelope} />
                 <span>contact@carshop.fr</span>
               </div>
+
               <div className="footer-contact-item">
                 <FontAwesomeIcon icon={faLocationDot} />
                 <span>
@@ -117,30 +124,41 @@ function Footer() {
             </div>
           </div>
 
-          {/* Colonne 4 : Newsletter */}
           <div className="footer-col">
-            <h3>Newsletter</h3>
+            <h3>{t("footer.newsletter")}</h3>
+
             {subscribed ? (
-              <p className="footer-newsletter-desc" style={{ color: "#2ec4b6" }}>
-                ✓ Merci pour votre abonnement !
+              <p
+                className="footer-newsletter-desc"
+                style={{ color: "#2ec4b6" }}
+              >
+                {t("footer.subscribed")}
               </p>
             ) : (
               <>
                 <p className="footer-newsletter-desc">
-                  Abonnez-vous pour recevoir nos dernières nouveautés et offres exclusives.
+                  {t("footer.newsletterText")}
                 </p>
-                <form className="footer-newsletter-form" onSubmit={handleSubscribe}>
+
+                <form
+                  className="footer-newsletter-form"
+                  onSubmit={handleSubscribe}
+                >
                   <input
                     type="email"
-                    placeholder="Votre adresse email"
+                    placeholder={t("footer.emailPlaceholder")}
                     className="footer-newsletter-input"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                   />
-                  <button type="submit" className="btn btn-primary footer-newsletter-btn">
-                    <FontAwesomeIcon icon={faPaperPlane} style={{ marginRight: "8px" }} />
-                    S'abonner
+
+                  <button
+                    type="submit"
+                    className="btn btn-primary footer-newsletter-btn"
+                  >
+                    <FontAwesomeIcon icon={faPaperPlane} />
+                    {t("footer.subscribe")}
                   </button>
                 </form>
               </>
@@ -148,13 +166,15 @@ function Footer() {
           </div>
         </div>
 
-        {/* Barre inférieure */}
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} CarShop. Tous droits réservés.</p>
+          <p>
+            © {new Date().getFullYear()} CarShop. {t("footer.rights")}
+          </p>
+
           <div className="footer-bottom-links">
-            <Link to="/mentions-legales">Mentions légales</Link>
-            <Link to="/politique-confidentialite">Politique de confidentialité</Link>
-            <Link to="/cgu">CGU</Link>
+            <Link to="/mentions-legales">{t("footer.legal")}</Link>
+            <Link to="/politique-confidentialite">{t("footer.privacy")}</Link>
+            <Link to="/cgu">{t("footer.terms")}</Link>
           </div>
         </div>
       </div>
