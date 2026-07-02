@@ -1,28 +1,20 @@
-// src/pages/Details.jsx
-
 import { useParams, useNavigate, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import cars from "../data/cars";
 import "../styles/details.css";
 
-// Dans src/pages/Details.jsx, modifie la ligne de fonction :
 function Details({ favorites, onToggleFavorite }) {
-  // useParams() lit les paramètres définis dans la route (ex: /voitures/:id)
-  // Ici, "id" arrive toujours sous forme de texte (string), même si c'est un nombre dans l'URL.
+  const { t } = useTranslation();
   const { id } = useParams();
   const navigate = useNavigate();
-
-  // On cherche la voiture correspondante dans notre tableau.
-  // Number(id) convertit le texte "3" en nombre 3, pour pouvoir le comparer à car.id.
   const car = cars.find((c) => c.id === Number(id));
 
-  // Si aucune voiture ne correspond (id invalide ou inexistant), on affiche un message clair
-  // au lieu de planter l'application.
   if (!car) {
     return (
       <div className="container details-not-found">
-        <h2>Voiture introuvable</h2>
+        <h2>{t("details.notFound")}</h2>
         <Link to="/voitures" className="btn btn-primary">
-          Retour à la liste
+          {t("details.backToList")}
         </Link>
       </div>
     );
@@ -34,7 +26,7 @@ function Details({ favorites, onToggleFavorite }) {
         className="btn btn-secondary details-back"
         onClick={() => navigate(-1)}
       >
-        ← Retour
+        {"<-"} {t("details.back")}
       </button>
 
       <div className="details-content">
@@ -46,28 +38,34 @@ function Details({ favorites, onToggleFavorite }) {
           <h1>
             {car.marque} {car.modele}
           </h1>
+
           <p className="details-price">{car.prix.toLocaleString()} €</p>
-          <p className="details-description">{car.description}</p>
+          <p className="details-description">
+            {t(`cars.descriptions.${car.descriptionKey}`)}
+          </p>
 
           <ul className="details-specs">
             <li>
-              <strong>Année :</strong> {car.annee}
+              <strong>{t("details.year")} :</strong> {car.annee}
             </li>
             <li>
-              <strong>Couleur :</strong> {car.couleur}
+              <strong>{t("details.color")} :</strong>{" "}
+              {t(`cars.colors.${car.couleurKey}`)}
             </li>
             <li>
-              <strong>Carburant :</strong> {car.carburant}
+              <strong>{t("details.fuel")} :</strong>{" "}
+              {t(`cars.fuels.${car.carburantKey}`)}
             </li>
             <li>
-              <strong>Transmission :</strong> {car.transmission}
+              <strong>{t("details.transmission")} :</strong>{" "}
+              {t(`cars.transmissions.${car.transmissionKey}`)}
             </li>
             <li>
-              <strong>Puissance :</strong> {car.puissance}
+              <strong>{t("details.power")} :</strong> {car.puissance}
             </li>
             <li>
-              <strong>Kilométrage :</strong> {car.kilometrage.toLocaleString()}{" "}
-              km
+              <strong>{t("details.mileage")} :</strong>{" "}
+              {car.kilometrage.toLocaleString()} km
             </li>
           </ul>
 
@@ -77,11 +75,12 @@ function Details({ favorites, onToggleFavorite }) {
               onClick={() => onToggleFavorite(car.id)}
             >
               {favorites.includes(car.id)
-                ? "Retirer des favoris"
-                : "Ajouter aux favoris"}
+                ? t("favorites.remove")
+                : t("favorites.add")}
             </button>
+
             <Link to="/contact" className="btn btn-secondary">
-              Demander un essai
+              {t("catalog.testDrive")}
             </Link>
           </div>
         </div>

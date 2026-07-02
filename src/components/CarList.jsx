@@ -37,13 +37,12 @@ function CarList({ favorites, onToggleFavorite }) {
 
   result = result.filter((car) => {
     return (
-      ((filters.marque === "" || car.marque === filters.marque) &&
-        (filters.annee === "" || car.annee === Number(filters.annee)) &&
-        filters.carburant === "") ||
-      (car.carburantKey === filters.carburant &&
-        (filters.transmission === "" ||
-          car.transmissionKey === filters.transmission) &&
-        (filters.prixMax === "" || car.prix <= Number(filters.prixMax)))
+      (filters.marque === "" || car.marque === filters.marque) &&
+      (filters.annee === "" || car.annee === Number(filters.annee)) &&
+      (filters.carburant === "" || car.carburantKey === filters.carburant) &&
+      (filters.transmission === "" ||
+        car.transmissionKey === filters.transmission) &&
+      (filters.prixMax === "" || car.prix <= Number(filters.prixMax))
     );
   });
 

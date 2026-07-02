@@ -1,6 +1,5 @@
-// src/pages/Contact.jsx
-
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
@@ -13,6 +12,7 @@ import {
 import "../styles/contact.css";
 
 function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,10 +31,8 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Simulation de l'envoi du formulaire
-    console.log("Formulaire envoyé :", formData);
+    console.log("Contact form:", formData);
     setIsSubmitted(true);
-    // Réinitialisation du formulaire
     setFormData({
       name: "",
       email: "",
@@ -45,22 +43,19 @@ function Contact() {
 
   return (
     <section className="contact-section container">
-      <h1 className="section-title">Contactez-nous</h1>
-      <p className="section-subtitle">
-        Une question ? Un projet d'achat ? Notre équipe est à votre disposition pour vous répondre dans les plus brefs délais.
-      </p>
+      <h1 className="section-title">{t("contactPage.title")}</h1>
+      <p className="section-subtitle">{t("contactPage.subtitle")}</p>
 
       <div className="contact-grid">
-        {/* Colonne Informations de contact */}
         <div className="contact-info-cards">
           <div className="contact-info-card">
             <div className="contact-info-icon">
               <FontAwesomeIcon icon={faPhone} />
             </div>
             <div className="contact-info-content">
-              <h3>Téléphone</h3>
+              <h3>{t("contactPage.phone")}</h3>
               <p>+33 1 23 45 67 89</p>
-              <p>Lundi au Vendredi, 9h - 19h</p>
+              <p>{t("contactPage.phoneHours")}</p>
             </div>
           </div>
 
@@ -69,7 +64,7 @@ function Contact() {
               <FontAwesomeIcon icon={faEnvelope} />
             </div>
             <div className="contact-info-content">
-              <h3>Email</h3>
+              <h3>{t("contactPage.email")}</h3>
               <p>contact@carshop.fr</p>
               <p>support@carshop.fr</p>
             </div>
@@ -80,8 +75,8 @@ function Contact() {
               <FontAwesomeIcon icon={faLocationDot} />
             </div>
             <div className="contact-info-content">
-              <h3>Adresse</h3>
-              <p>123 Avenue des Champs-Élysées</p>
+              <h3>{t("contactPage.address")}</h3>
+              <p>123 Avenue des Champs-Elysees</p>
               <p>75008 Paris, France</p>
             </div>
           </div>
@@ -91,93 +86,90 @@ function Contact() {
               <FontAwesomeIcon icon={faClock} />
             </div>
             <div className="contact-info-content">
-              <h3>Horaires d'ouverture</h3>
-              <p>Lun - Ven : 9h00 - 19h00</p>
-              <p>Samedi : 10h00 - 18h00</p>
+              <h3>{t("contactPage.openingHours")}</h3>
+              <p>{t("contactPage.week")}</p>
+              <p>{t("contactPage.saturday")}</p>
             </div>
           </div>
         </div>
 
-        {/* Colonne Formulaire de contact */}
         <div className="contact-form-container">
           {isSubmitted ? (
             <div className="form-success-message fade-in">
               <div className="form-success-icon">
                 <FontAwesomeIcon icon={faCircleCheck} />
               </div>
-              <h2>Message envoyé !</h2>
-              <p className="section-subtitle">
-                Merci de nous avoir contactés. Nous reviendrons vers vous sous 24h.
-              </p>
+              <h2>{t("contactPage.successTitle")}</h2>
+              <p className="section-subtitle">{t("contactPage.successText")}</p>
               <button
                 className="btn btn-primary"
                 onClick={() => setIsSubmitted(false)}
               >
-                Envoyer un autre message
+                {t("contactPage.sendAnother")}
               </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              <h2>Envoyez-nous un message</h2>
+              <h2>{t("contactPage.formTitle")}</h2>
 
               <div className="form-group">
-                <label htmlFor="name">Nom complet</label>
+                <label htmlFor="name">{t("contactPage.nameLabel")}</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Votre nom"
+                  placeholder={t("contactPage.namePlaceholder")}
                   className="form-control"
                   required
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">Adresse email</label>
+                <label htmlFor="email">{t("contactPage.emailLabel")}</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="exemple@email.com"
+                  placeholder={t("contactPage.emailPlaceholder")}
                   className="form-control"
                   required
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="subject">Sujet</label>
+                <label htmlFor="subject">{t("contactPage.subjectLabel")}</label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  placeholder="Objet de votre message"
+                  placeholder={t("contactPage.subjectPlaceholder")}
                   className="form-control"
                   required
                 />
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Message</label>
+                <label htmlFor="message">{t("contactPage.messageLabel")}</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Comment pouvons-nous vous aider ?"
+                  placeholder={t("contactPage.messagePlaceholder")}
                   className="form-control"
                   required
-                ></textarea>
+                />
               </div>
 
               <button type="submit" className="btn btn-primary form-submit-btn">
                 <FontAwesomeIcon icon={faPaperPlane} />
-                <span>Envoyer le message</span>
+                <span>{t("contactPage.submit")}</span>
               </button>
             </form>
           )}
